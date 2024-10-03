@@ -1,0 +1,81 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #0B0C10; /* Un noir profond pour l'arrière-plan */
+    color: #C5C6C7; /* Texte argenté pour une bonne lisibilité */
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    color: #45A29E; /* Bleu profond pour les titres */
+}
+
+a {
+    color: #66FCF1; /* Un bleu clair pour les liens */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #1F2833; /* Changement de couleur au survol pour contraste */
+}
+
+header {
+    background-color: #1F2833; /* Gris foncé pour le header */
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.main-banner {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.main-banner img {
+    width: 100%; /* Image pleine largeur */
+    height: auto; /* Conserver les proportions */
+    max-height: 500px; /* Limiter la hauteur de l'image */
+    object-fit: cover; /* Couvrir tout l'espace */
+}
+
+nav ul li a {
+    color: #C5C6C7; /* Couleur argentée pour les liens du menu */
+    font-size: 18px;
+}
+
+main {
+    padding: 40px;
+    text-align: center;
+}
+
+footer {
+    background-color: #1F2833; /* Assorti au header */
+    color: #C5C6C7;
+    padding: 20px;
+    text-align: center;
+}
+
+button {
+    background-color: #45A29E; /* Boutons bleu profond */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #66FCF1; /* Changement de couleur au survol */
+}
