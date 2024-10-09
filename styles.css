@@ -26,6 +26,13 @@ header {
     text-align: center;
 }
 
+.top-menu {
+    background-color: #3260a8; /* Gris clair pour le menu */
+    padding: 10px;
+    text-align: center;
+    
+}
+
 nav ul {
     list-style: none;
     padding: 0;
