@@ -2,7 +2,7 @@
 Site vitrine pour Epitygmata
 
 
-Réalisé par ichinose102 d'EPITYGMATA,
+Réalisé par Ichinose102 d'EPITYGMATA,
 Si ce site est présenté comme fait par quelqu'un d'autre, CE SITE A ETE VOLÉ. 
 Merci de le signaler à Epitygmata et ne pas acheter quelconque service de cette personne, c'est une arnaque. 
 > gael.tournier@epitygmata.fr
