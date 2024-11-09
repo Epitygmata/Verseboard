@@ -8,9 +8,35 @@
     <link rel="stylesheet" href="Css/styles.css">
 </head>
 <body>
-    <header>
-        <h1><a href="index.html">Verseboard</a></h1>
+    <header class="navbar">
+        <div class="logo"><a href="index.html">Verseboard</a></div>
+        <nav class="nav-links">
+            <a href="#">Accueil</a>
+            <a href="#">Produits</a>
+            <a href="#">Vêtements</a>
+            <a href="#">Chaussures</a>
+            <a href="#">Accessoires</a>
+        </nav>
+        <div class="user-actions">
+            <a href="#" class="icon">🔍</a>
+            <a href="#" class="icon">👤</a>
+            <a href="#" class="icon">❤️</a>
+            <a href="#" class="icon">🛒</a>
+        </div>
     </header>
+
+    <main class="product-container">
+        <section class="product-image">
+            <img src="Assests/Skate_HelloKitty.jpg" alt="Image du skateboard">
+        </section>
+        <section class="product-details">
+            <h1 class="product-title">Board Verseboard X Hello Kitty</h1>
+            <p class="product-price">169,00€</p>
+            <p class="product-description">Obtenez 40 points de fidélité sur votre compte Verseboard</p>
+            <button class="add-to-cart">Ajouter au panier</button>
+            <button class="favorite">❤️</button>
+        </section>
+    </main>
 
 </body>
 </html>
