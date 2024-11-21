@@ -4,13 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skate Kid Buu-Verseboard</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Skate KidBuu-Verseboard</title>
+    <link rel="stylesheet" href="Css/styles.css">
 </head>
 <body>
-    <header>
-        <h1><a href="index.html">Verseboard</a></h1>
+    <header class="navbar">
+        <div class="logo"><a href="index.html">Verseboard</a></div>
+        <nav class="nav-links">
+            <a href="index.html">Accueil</a>
+            <a href="skateboard.html">Produits</a>
+            <a href="#">Vêtements</a>
+            <a href="chaussures.html">Chaussures</a>
+            <a href="#">Accessoires</a>
+        </nav>
+        <div class="user-actions">
+            <a href="#" class="icon">🔍</a>
+            <a href="#" class="icon">👤</a>
+            <a href="#" class="icon">❤️</a>
+            <a href="panier.html" class="icon">🛒</a>
+        </div>
     </header>
+
+    <main class="product-container">
+        <section class="product-image">
+            <img src="Assests/Skate_KidBuu.webp" alt="Image du skateboard">
+        </section>
+        <section class="product-details">
+            <h1 class="product-title">Board Verseboard Kid Buu /h1>
+            <p class="product-price">138,00€</p>
+            <p class="product-description">Obtenez 13 points de fidélité sur votre compte Verseboard</p>
+            <button class="add-to-cart">Ajouter au panier</button>
+            <button class="favorite">❤️</button>
+            <label> Code promo : </label>
+            <input type="text" id="name" name="name" required minlength="4" maxlength="8" size="10" />
+            
+        </section>
+    </main>
 
 </body>
 </html>
