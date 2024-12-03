@@ -1,325 +1,177 @@
 /* Global Styles */
 body {
+    margin: 0;
     font-family: 'Arial', sans-serif;
-    background-color: #0B0C10; /* Un noir profond pour l'arrière-plan */
-    color: #C5C6C7; /* Texte argenté pour une bonne lisibilité */
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Navigation Menu */
+nav.top-menu {
+    background-color: #111; /* Couleur de fond */
+    padding: 20px 20px; /* Augmentation de la hauteur (avant : 10px 20px) */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky; /* Menu reste visible en haut */
+    top: 0;
+    z-index: 1000;
+    height: auto; /* Laisse la hauteur s'ajuster au contenu */
+}
+
+nav.top-menu ul {
+    list-style: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espacement entre les liens */
 }
 
-h1, h2 {
-    color: #45A29E; /* Bleu profond pour les titres */
+nav.top-menu li {
+    display: inline;
 }
 
-a {
-    color: #66FCF1; /* Un bleu clair pour les liens */
+nav.top-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 5px 10px; /* Ajout de padding pour un effet plus rempli */
+}
+
+nav.top-menu a:hover {
+    color: #f39c12; /* Couleur au survol */
+}
+
+nav.top-menu .Logo h1 a {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
     text-decoration: none;
 }
 
-a:hover {
-    color: #1F2833; /* Changement de couleur au survol pour contraste */
-}
-
-header {
-    background-color: #1F2833; /* Gris foncé pour le header */
-    padding: 20px;
-    text-align: center;
-}
-
-.top-menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1em 2em;
-    background-color: #1F2833;
-    color: #C5C6C7;
-}
-
-.top-menu .logo{
-    font-size: 1.5em;
-    font-weight: bold;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
+nav.top-menu .Logo h1 {
     margin: 0;
 }
 
-nav ul li {
-    display: inline-block;
-    margin: 0 15px;
-}
-
+/* Main Banner */
 .main-banner {
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
 }
 
 .main-banner img {
-    width: 100%; /* Image pleine largeur */
-    height: auto; /* Conserver les proportions */
-    max-height: 500px; /* Limiter la hauteur de l'image */
-    object-fit: cover; /* Couvrir tout l'espace */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.main-banner .text_overlay{
+.main-banner .text_overlay {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 10px;
-    font-size: 24px;
-    border-radius: 15px;
-}
-
-nav ul li a {
-    color: #C5C6C7; /* Couleur argentée pour les liens du menu */
-    font-size: 18px;
-}
-
-main {
-    padding: 40px;
     text-align: center;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1rem 2rem;
+    border-radius: 8px;
 }
 
+.main-banner .text_overlay h2 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.main-banner .text_overlay p {
+    font-size: 1rem;
+    margin: 0.5rem 0 0;
+}
+
+/* Marquee */
 .marquee {
-    width: 100%; /* Largeur du conteneur */
-    overflow: hidden; /* Masque tout ce qui dépasse */
-    white-space: nowrap; /* Évite que le texte ne revienne à la ligne */
-    box-sizing: border-box;
+    background-color: #ff4747;
+    color: #fff;
+    padding: 0.5rem 0;
+    text-align: center;
+    font-weight: bold;
 }
 
-.marquee-text {
-    font-family: 'Roboto Black', sans-serif;
-    font-size: 48px;
-    font-weight: 900; /* Plus épais */
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #ffffff;
-    text-align: center;
+.marquee .marquee-text {
     display: inline-block;
-    padding-left: 27%; /* Commence hors de l'écran */
-    animation: marquee 10s linear infinite; /* Animation défilante */
+    animation: marquee 10s linear infinite;
 }
 
 @keyframes marquee {
     0% {
-        transform: translateX(100%); /* Le texte commence en dehors de l'écran */
+        transform: translateX(100%);
     }
     100% {
-        transform: translateX(-100%); /* Le texte défile jusqu'à sortir complètement */
+        transform: translateX(-100%);
     }
 }
 
-/* Styles pour la grille des produits */
+/* Product Grid */
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Grille réactive avec 1 à plusieurs colonnes */
-    gap: 20px; /* Espace entre les items */
-    padding: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
 }
 
 .product-item {
-    background-color: #f5f5f5; /* Arrière-plan clair */
-    padding: 15px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
     text-align: center;
-    border-radius: 10px; /* Coins arrondis */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Légère ombre */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
 .product-item img {
-    width: 100%; /* L'image prend toute la largeur possible */
-    height: 200px; /* Fixe une hauteur de 200px */
-    object-fit: cover; /* Ajuste l'image pour qu'elle remplisse l'espace défini */
-    margin-bottom: 15px; /* Espace sous l'image */
+    width: 100%; /* Adapte l'image à la largeur du conteneur */
+    height: auto; /* Conserve les proportions */
+    border-radius: 8px; /* Donne des coins arrondis pour un meilleur rendu */
+    object-fit: cover; /* Ajuste les images si elles dépassent */
+    max-height: 300px; /* Limite la hauteur pour garder une présentation uniforme */
 }
 
+
 .product-item h3 {
-    font-size: 18px;
-    font-weight: bold;
-    margin: 10px 0;
-    color: #333;
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
 }
 
 .product-item .brand {
-    font-size: 14px;
-    color: #888; /* Couleur grise pour le nom de la marque */
-    text-transform: uppercase;
-    margin-bottom: 5px;
+    font-size: 0.9rem;
+    color: #888;
 }
 
 .product-item .price {
-    font-size: 16px;
+    font-size: 1.1rem;
     font-weight: bold;
-    color: #000; /* Couleur noire pour le prix */
+    color: #121212;
 }
 
+/* Footer */
 footer {
-    background-color: #1F2833; /* Assorti au header */
-    color: #C5C6C7;
-    padding: 20px;
     text-align: center;
+    padding: 1rem;
+    background-color: #121212;
+    color: #fff;
+    margin-top: 2rem;
 }
 
-button {
-    background-color: #45A29E; /* Boutons bleu profond */
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #66FCF1; /* Changement de couleur au survol */
-}
-
-/* Mode clair */
-body.light-mode {
-    background-color: #ffffff;
-    color: #000000;
-}
-
-/* Mode sombre */
-body.dark-mode {
-    background-color: #2c2c2c;
-    color: #f5f5f5;
-}
-
-/* Style du bouton */
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border: none;
-    margin-top: 20px;
-    background-color: #007BFF;
-    color: white;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-#checkboxInput {
-    display: none;
-}
-
-.toggleSwitch {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    width: 50px;
-    height: 30px;
-    background-color: rgb(82, 82, 82);
-    border-radius: 20px;
-    cursor: pointer;
-    transition-duration: .2s;
-}
-
-.toggleSwitch::after {
-    content: "";
-    position: absolute;
-    height: 10px;
-    width: 10px;
-    left: 5px;
-    background-color: transparent;
-    border-radius: 50%;
-    transition-duration: .2s;
-    box-shadow: 5px 2px 7px rgba(8, 8, 8, 0.26);
-    border: 5px solid white;
-}
-
-#checkboxInput:checked + .toggleSwitch::after {
-    transform: translateX(100%);
-    transition-duration: .2s;
-    background-color: white;
-}
-
-#checkboxInput:checked + .toggleSwitch {
-    background-color: rgb(148, 118, 255);
-    transition-duration: .2s;
-}
-
-/* Pour le mode sombre */
-.dark-mode {
-    background-color: black;
-    color: white;
-}
-
-.content {
-    text-align: center;
-    margin-top: 50px;
-    position: absolute;
-    top: 20px; /* Ajuste la valeur selon l'espace que tu souhaites entre le bouton et le haut de la page */
-    right: 20px; /* Ajuste la valeur selon l'espace que tu souhaites entre le bouton et le côté droit */
-    z-index: 1000; /* Assure-toi que le bouton est au-dessus du contenu */
-}
-
-/* Ajouts pour la section Espace Client */
-.client-space {
-    padding: 40px;
-    background-color: #1F2833; /* Harmonisation avec le header */
-    color: #C5C6C7; /* Texte argenté */
-    border-radius: 10px; /* Coins arrondis pour un look plus moderne */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Légère ombre */
-}
-
-.client-login, .client-dashboard {
-    background-color: #0B0C10; /* Fond noir profond pour se fondre avec le reste */
-    padding: 20px;
-    margin-bottom: 20px; /* Espacement entre les sections */
-    border-radius: 10px; /* Coins arrondis */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Légère ombre */
-}
-
-.client-login h3, .client-dashboard h3 {
-    color: #45A29E; /* Titre bleu profond */
-}
-
-.client-login label, .client-dashboard a {
-    color: #C5C6C7; /* Texte argenté */
-}
-
-.client-login input, .client-login button {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px; /* Espacement entre les champs */
-    border-radius: 5px;
-}
-
-.client-login button {
-    background-color: #45A29E; /* Boutons bleu profond */
-    border: none;
-    color: white;
-    cursor: pointer;
-}
-
-.client-login button:hover {
-    background-color: #66FCF1; /* Changement de couleur au survol */
-}
-
-.client-dashboard ul {
-    list-style: none;
-    padding: 0;
-}
-
-.client-dashboard ul li {
-    margin-bottom: 10px;
-}
-
-.client-dashboard ul li a {
-    color: #66FCF1; /* Liens bleus clairs */
-    text-decoration: none;
-}
-
-.client-dashboard ul li a:hover {
-    color: #1F2833; /* Changement de couleur au survol */
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
 }
