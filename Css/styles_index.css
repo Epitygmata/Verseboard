@@ -162,6 +162,20 @@ nav.top-menu .Logo h1 {
     color: #121212;
 }
 
+a:link, a:visited {
+    color: #111; /* Remplacez par la couleur que vous voulez */
+    text-decoration: none; /* Si besoin d'enlever le soulignement */
+}
+
+a:hover {
+    color: #f39c12; /* Couleur au survol */
+}
+
+a:active {
+    color: #d35400; /* Couleur au moment où le lien est cliqué */
+}
+
+
 /* Footer */
 footer {
     text-align: center;
