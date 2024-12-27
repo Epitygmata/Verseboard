@@ -7,6 +7,12 @@ body {
     padding: 0;
 }
 
+.logo img {
+    height: 50px; /* Ajuste la hauteur du logo */
+    width: auto; /* Maintient le ratio d'aspect */
+    display: block; /* Supprime les espaces blancs sous l'image */
+}
+
 header.navbar {
     display: flex;
     justify-content: space-between;
